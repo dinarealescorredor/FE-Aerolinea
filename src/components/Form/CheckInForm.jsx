@@ -3,7 +3,8 @@ import ContactButton from "../Buttons/ContactButton.jsx";
 import {Box, InputAdornment, TextField, Typography} from "@mui/material";
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import PersonIcon from '@mui/icons-material/Person';
-import Title from "../Title/index.jsx";
+import Swal from 'sweetalert2';
+import { Navigate } from "react-router-dom";
 
 class CheckInForm extends Component {
     constructor(props) {
@@ -12,6 +13,8 @@ class CheckInForm extends Component {
         this.state = {
             reservationNumber: '',
             lastName: '',
+            redirect: false,
+            redirectTo: "",
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -29,15 +32,24 @@ class CheckInForm extends Component {
         e.preventDefault();
 
         const { reservationNumber, lastName } = this.state;
-        if (reservationNumber && lastName) {
-            console.log("estamos ok")
+        if (reservationNumber == "1234" && lastName == "reales") {
+            this.setState({ redirect: true, redirectTo: "reserva" });
+        } else {
+            Swal.fire({
+                title: "<span>" + "Error!" + "</span>",
+                html: "<span>" + "Ups! Revisa tu código de reserva o tus apellidos" + "</span>",
+                icon: 'error',
+                background: '#fff',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: "#1d9bf0",
+            })
         }
     }
 
 
 
     render() {
-        const { reservationNumber, lastName } = this.state;
+        const { reservationNumber, lastName, redirect } = this.state;
 
         return (
             <Box>
@@ -92,6 +104,7 @@ class CheckInForm extends Component {
                         <ContactButton type="submit"/>
                     </div>
                 </form>
+                {redirect && <Navigate to={"/" + this.state.redirectTo} />}
             </Box>
         );
     }

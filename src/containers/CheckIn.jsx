@@ -8,7 +8,7 @@ const {
     body1,
 } = section1Content
 
-const Section1 = () => {
+const CheckIn = () => {
     return (
         <Box display="block">
             <Box
@@ -60,4 +60,4 @@ const Section1 = () => {
     )
 }
 
-export default Section1
+export default CheckIn

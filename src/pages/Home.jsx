@@ -1,11 +1,10 @@
 import React  from 'react';
-import Section1 from "../containers/Section1.jsx";
+import CheckIn from "../containers/CheckIn.jsx";
 
 const Home = () => {
     return (
         <div>
-            {/* Sections */}
-            <Section1/>
+            <CheckIn/>
         </div>
     )
 }
