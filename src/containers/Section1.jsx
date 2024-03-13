@@ -1,8 +1,8 @@
 import React  from 'react';
-import ContactButton from "../components/Buttons/ContactButton.jsx";
 import Title from "../components/Title/index.jsx";
 import {section1Content} from "../utils/content.js";
 import {Box} from "@mui/material";
+import CheckInForm from "../components/Form/CheckInForm.jsx";
 const {
     title1,
     body1,
@@ -23,7 +23,6 @@ const Section1 = () => {
                 sx={{
                     margin: "12vh auto",
                     width: "45%",
-                    height: 500,
                     top: 0,
                     right: 0,
                     left: 0
@@ -42,19 +41,18 @@ const Section1 = () => {
                             alignSelf: "stretch",
                             margin: "1vh auto",
                             textAlign: "center",
-                            height: 72
                         }}>
                         <Title
-                            variant={{ md: "body1" }}
                             sx={{
-                                fontWeight: 200
+                                fontWeight: 200,
+                                fontSize: 16
                             }}
                         >
                             {body1}
                         </Title>
                     </Box>
-                    <Box>
-                        <ContactButton/>
+                    <Box display="block">
+                        <CheckInForm/>
                     </Box>
                 </Box>
             </Box>
