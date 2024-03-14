@@ -4,7 +4,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 const ContactButton = ({ sx = {}, ...props }) => {
     return (
-        <Button variant="contained" sx={{ borderRadius: 4, ...sx }} {...props}>
+        <Button variant="contained" sx={{ borderRadius: 4, ...sx }} {...props} fullWidth>
             Empezar check-in
             <KeyboardArrowRightIcon />
         </Button>
