@@ -101,7 +101,7 @@ class CheckInForm extends Component {
                         <Typography variant="caption" display="block" gutterBottom>Ingresa tu(s) apellido(s), tal como aparece registrados en tu reserva.</Typography>
                     </div>
                     <div style={{ margin: "24px auto 0"}}>
-                        <ContactButton type="submit"/>
+                        <ContactButton type="submit">Empezar check-in</ContactButton>
                     </div>
                 </form>
                 {redirect && <Navigate to={"/" + this.state.redirectTo} />}
