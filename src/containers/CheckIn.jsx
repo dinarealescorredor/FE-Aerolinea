@@ -31,7 +31,7 @@ const CheckIn = () => {
                 <img
                     src={Logo}
                     style={{ width: "25%", display: "block", margin: "auto" }}
-                    alt={"image"}/>
+                    alt={"logo"}/>
 
                 <Title
                     variant={{ xs: "h5", sm:"h5", md: "h4" }}

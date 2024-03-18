@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import PropTypes from "prop-types";
 
 const ContactButton = ({ sx = {}, children, ...props }) => {
     return (
@@ -9,6 +10,11 @@ const ContactButton = ({ sx = {}, children, ...props }) => {
             <KeyboardArrowRightIcon />
         </Button>
     );
+};
+
+ContactButton.propTypes = {
+    children: PropTypes.node.isRequired,
+    sx: PropTypes.object,
 };
 
 export default ContactButton;

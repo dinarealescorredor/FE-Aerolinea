@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Swal from "sweetalert2";
-import {Box, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography} from "@mui/material";
+import {Box, FormControl, Grid, MenuItem, Select, TextField, Typography} from "@mui/material";
 import Title from "../Title/index.jsx";
 import {section2Content} from "../../utils/content.js";
 import ContactButton from "../Buttons/ContactButton.jsx";
