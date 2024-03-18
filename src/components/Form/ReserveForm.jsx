@@ -52,7 +52,14 @@ class ReserveForm extends Component {
 
         const { formData } = this.state;
         if (formData) {
-            console.log("todo ok mijita")
+            Swal.fire({
+                title: "<span>" + "Registro guardado con exito!" + "</span>",
+                html: "<span>" + "Hemos guardado tus datos con exito" + "</span>",
+                icon: 'success',
+                background: '#fff',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: "#1d9bf0",
+            })
         } else {
             Swal.fire({
                 title: "<span>" + "Error!" + "</span>",
@@ -90,6 +97,7 @@ class ReserveForm extends Component {
                                 fullWidth
                                 type='text'
                                 color="info"
+                                placeholder="Nombre completo"
                                 value={formData.emergencyName}
                                 onChange={this.handleChange}
                                 required
@@ -101,6 +109,7 @@ class ReserveForm extends Component {
                             <TextField
                                 id="emergencyCellPhone"
                                 variant={"standard"}
+                                placeholder="+00 000 000 0000"
                                 fullWidth
                                 type='number'
                                 color="info"
@@ -142,6 +151,7 @@ class ReserveForm extends Component {
                             <TextField
                                 id="medicalPreexistence"
                                 variant={"standard"}
+                                placeholder="Indicar enfermedad"
                                 fullWidth
                                 type='text'
                                 color="info"
@@ -155,7 +165,7 @@ class ReserveForm extends Component {
 
                     <Grid container spacing={2}>
                         <Grid item sm={12} xs={12}  style={{marginTop: 30}}>
-                            <Title variant={"h1"}>{title2}</Title>
+                            <Title variant={"h1"}>{body6}</Title>
                         </Grid>
 
                         <Grid item sm={12} xs={12}>
@@ -164,6 +174,7 @@ class ReserveForm extends Component {
                                 id="address"
                                 variant={"standard"}
                                 fullWidth
+                                placeholder="Dirección"
                                 type='text'
                                 color="info"
                                 value={formData.address}
