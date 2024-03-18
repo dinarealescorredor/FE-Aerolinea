@@ -3,6 +3,7 @@ import Title from "../components/Title/index.jsx";
 import {section1Content} from "../utils/content.js";
 import {Box} from "@mui/material";
 import CheckInForm from "../components/Form/CheckInForm.jsx";
+import Logo from "../img/airplane.png";
 const {
     title1,
     body1,
@@ -13,7 +14,7 @@ const CheckIn = () => {
         <Box display="block">
             <Box
                 style={{
-                    padding: "43px 24px",
+                    padding: "30px 24px 43px 24px",
                     boxShadow: "0 2px 12px #1b1b1b26",
                     borderTop: "solid 5px #1d9bf0",
                     backgroundColor: "#fff",
@@ -27,6 +28,10 @@ const CheckIn = () => {
                     right: 0,
                     left: 0
                 }}>
+                <img
+                    src={Logo}
+                    style={{ width: "25%", display: "block", margin: "auto" }}
+                    alt={"logo"}/>
 
                 <Title
                     variant={{ xs: "h5", sm:"h5", md: "h4" }}
